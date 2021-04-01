@@ -5,4 +5,12 @@ block content
   p Welcome to #{title}
   p Hey this is sathya 
   
-  button(type="button", class="btn btn-primary") Press Me
+  button(type="button",onclick="update()" class="btn btn-success") Press Me
+  div(id="target") clickme
+  script.
+    var client_count=0;
+    function update() {
+      client_count++;
+      document.getElementById("target").innerHTML=`Value now ${client_count}`
+    }
+  
